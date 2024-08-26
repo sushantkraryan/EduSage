@@ -45,12 +45,14 @@ public class Home extends JFrame implements ActionListener {
         details.setForeground(Color.BLUE);
         menuBar.add(details);
 
-        JMenuItem facultyDetails = new JMenuItem("New Faculty Details");
+        JMenuItem facultyDetails = new JMenuItem("View Faculty Details");
         facultyDetails.setBackground(Color.WHITE);
+        facultyDetails.addActionListener(this);
         details.add(facultyDetails);
 
-        JMenuItem studentDetails = new JMenuItem("New Student Details");
+        JMenuItem studentDetails = new JMenuItem("View Student Details");
         studentDetails.setBackground(Color.WHITE);
+        facultyDetails.addActionListener(this);
         details.add(studentDetails);
 
         //leave
@@ -177,6 +179,10 @@ public class Home extends JFrame implements ActionListener {
             new AddTeacher();
         } else if (str.equals("New Student Information")) {
             new AddStudent();
+        } else if (str.equals("View Faculty Details")) {
+            new TeacherDetails();
+        } else if (str.equals("View Student Details")) {
+            new StudentDetails();
         }
     }
 
