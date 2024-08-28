@@ -103,10 +103,12 @@ public class Home extends JFrame implements ActionListener {
 
         JMenuItem UpdateFacultyInfo = new JMenuItem("Update Faculty Details");
         UpdateFacultyInfo.setBackground(Color.WHITE);
+        UpdateFacultyInfo.addActionListener(this);
         updateInfo.add(UpdateFacultyInfo);
 
         JMenuItem updateStudentInfo = new JMenuItem("Update Student Details");
         updateStudentInfo.setBackground(Color.WHITE);
+        updateStudentInfo.addActionListener(this);
         updateInfo.add(updateStudentInfo);
 
         // fee
@@ -195,6 +197,10 @@ public class Home extends JFrame implements ActionListener {
             new TeacherLeaveDetails();
         } else if (str.equals("Student Leave Details")) {
             new StudentLeaveDetails();
+        } else if (str.equals("Update Faculty Details")) {
+            new UpdateTeacher();
+        } else if (str.equals("Update Student Details")) {
+            new UpdateStudent();
         }
     }
 
