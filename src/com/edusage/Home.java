@@ -120,10 +120,12 @@ public class Home extends JFrame implements ActionListener {
 
         JMenuItem feeStructure = new JMenuItem("Fee Structure");
         feeStructure.setBackground(Color.WHITE);
+        feeStructure.addActionListener(this);
         fee.add(feeStructure);
 
         JMenuItem feeForm = new JMenuItem("Student Fee Form");
         feeForm.setBackground(Color.WHITE);
+        feeForm.addActionListener(this);
         fee.add(feeForm);
 
         // Utility
@@ -210,6 +212,10 @@ public class Home extends JFrame implements ActionListener {
             new ExamDetails();
         } else if (str.equals("About")) {
             new About();
+        } else if (str.equals("Student Fee Form")) {
+            new StudentFeeForm();
+        } else if (str.equals("Fee Structure")) {
+            new FeeStructure();
         }
     }
 
