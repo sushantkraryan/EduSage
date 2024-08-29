@@ -148,6 +148,7 @@ public class Home extends JFrame implements ActionListener {
 
         JMenuItem abt = new JMenuItem("About");
         abt.setBackground(Color.WHITE);
+        abt.addActionListener(this);
         about.add(abt);
 
         // exit
@@ -207,6 +208,8 @@ public class Home extends JFrame implements ActionListener {
             new EnterMarks();
         } else if (str.equals("Examination Results")) {
             new ExamDetails();
+        } else if (str.equals("About")) {
+            new About();
         }
     }
 
